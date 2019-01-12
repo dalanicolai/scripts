@@ -1,0 +1,5 @@
+#!/bin/bash
+
+DEVICE=$(findfs LABEL=thuis) && udisksctl mount -b $DEVICE
+notify-send 'disk thuis mounted'
+

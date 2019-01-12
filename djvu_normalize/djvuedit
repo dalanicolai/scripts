@@ -1,0 +1,7 @@
+#!/bin/bash
+
+clear
+
+# first print page sizes and number
+djvudump $1 |grep -i -A1 form:djvu |xargs -l3 |gawk '{if ($9) print $4,$9}'
+

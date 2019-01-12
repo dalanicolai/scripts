@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+xdotool key ctrl+c
+xdg-open https://translate.google.nl/#auto/en/$(xsel --clipboard -o)

@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+#xdg-open https://translate.google.nl/#auto/en/$(xsel --clipboard -o)
+
+import webbrowser
+import os
+import sys
+
+if os.name == 'posix' and sys.version_info[0] < 3:
+    import subprocess32 as subprocess
+else:
+    import subprocess
+
+
+text=subprocess.check_output(['xsel','--clipboard']) 
+webbrowser.open('https://en.oxforddictionaries.com/definition/%s' % (text))
